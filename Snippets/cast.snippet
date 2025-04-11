@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>cast</Title>
+			<Shortcut>cast</Shortcut>
+			<Description>Code snippet for 'static_cast'</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Default>unsigned long long</Default>
+					<ToolTip>Control variable type</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>var</ID>
+					<Default> </Default>
+					<ToolTip>Control variable</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[static_cast< $type$ >($var$) $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
