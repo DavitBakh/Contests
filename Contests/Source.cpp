@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define _SILENCE_CXX20_CISO646_REMOVED_WARNING
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -21,6 +22,6 @@ int main()
 #pragma endregion
 
 
-
+	
 
 }
