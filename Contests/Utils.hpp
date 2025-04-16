@@ -4,6 +4,8 @@
 #include <bits/stdc++.h> 
 #include <Windows.h>
 
+#define all(a) a.begin(), a.end()
+
 void CopyToClipboard(const std::string& text)
 {
     // Open the clipboard
