@@ -8,8 +8,6 @@ using namespace std;
 #define read(x) for(auto &elem : x) cin >> elem;
 #define forall(x) for(auto &e : x)
 
-#define endl '\n'
-
 constexpr int MOD = 1e9 + 7;
 
 int main()
@@ -24,7 +22,5 @@ int main()
 	std::cin.tie(0);
 #pragma endregion
 
-
 	
-
 }
