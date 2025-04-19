@@ -5,6 +5,10 @@
 #include <Windows.h>
 
 #define all(a) a.begin(), a.end()
+#define ull unsigned long long
+
+constexpr unsigned long long INF = 1e18;
+constexpr int MOD = 1e9 + 7;
 
 void CopyToClipboard(const std::string& text)
 {
@@ -186,6 +190,18 @@ void GetZF(const string& str, vector<int>& z)
 			r = i + z[i] - 1;
 		}
 	}
+}
+
+int binpow(int a, int b, int m = MOD) 
+{
+	int res = 1;
+	a %= m;
+	while (b > 0) {
+		if (b & 1) res = res * a % m;
+		a = a * a % m;
+		b >>= 1;
+	}
+	return res;
 }
 
 

@@ -8,7 +8,9 @@ using namespace std;
 #define read(x) for(auto &elem : x) cin >> elem;
 #define forall(x) for(auto &e : x)
 
-constexpr int md = 1E9 + 7;
+#define endl '\n'
+
+constexpr int MOD = 1e9 + 7;
 
 int main()
 {
