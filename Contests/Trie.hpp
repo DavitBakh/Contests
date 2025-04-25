@@ -20,11 +20,13 @@ class Trie
 public:
 	Trie() : root(new Node) {}
 
-	void insert(std::string& word)
+	void insert(const std::string& word)
 	{
 		Node* node = root;
 		for (char c : word)
 		{
+			c = tolower(c);
+
 			int index = c - 'a';
 			if (!node->children[index])
 				node->children[index] = new Node();
@@ -34,11 +36,13 @@ public:
 		node->endOfWord = true;
 	}
 
-	bool search(std::string& word)
+	bool contains(const std::string& word)
 	{
 		Node* node = root;
 		for (char c : word)
 		{
+			c = tolower(c);
+
 			int index = c - 'a';
 			if (!node->children[index])
 				return false;
@@ -48,11 +52,13 @@ public:
 		return node->endOfWord;
 	}
 
-	bool startsWith(std::string& prefix)
+	bool startsWith(const std::string& prefix)
 	{
 		Node* node = root;
 		for (char c : prefix)
 		{
+			c = tolower(c);
+
 			int index = c - 'a';
 			if (!node->children[index])
 				return false;
@@ -62,11 +68,13 @@ public:
 		return true;
 	}
 
-	void deleteWord(std::string& word)
+	void deleteWord(const std::string& word)
 	{
 		Node* node = root;
 		for (char c : word)
 		{
+			c = tolower(c);
+
 			int index = c - 'a';
 			if (!node->children[index])
 				return;
@@ -77,7 +85,7 @@ public:
 			node->endOfWord = false;
 	}
 
-	void print(Node* node, std::string prefix) const
+	void print(Node* node, const std::string& prefix) const
 	{
 		if (node->endOfWord)
 			std::cout << prefix << std::endl;
