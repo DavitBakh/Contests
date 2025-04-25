@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="BigDecimal.hpp" />
     <ClInclude Include="BigInt.hpp" />
+    <ClInclude Include="Trie.hpp" />
     <ClInclude Include="Utils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
