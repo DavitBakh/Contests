@@ -192,7 +192,7 @@ void GetZF(const string& str, vector<int>& z)
 	}
 }
 
-int binpow(int a, int b, int m = MOD) 
+int binpow(int a, int b, int m = MOD)
 {
 	int res = 1;
 	a %= m;
@@ -204,5 +204,34 @@ int binpow(int a, int b, int m = MOD)
 	return res;
 }
 
+void Djikstra(vector < vector < pair<int, int>>>& gr)
+{
+	int n = gr.size();
+	vector<int> d(n, INF);
 
+	d[0] = 0;
+	priority_queue < pair<int, int>, vector<pair<int, int>>, greater<>> pq;
+	pq.push({ 0,0 });
+
+	while (!pq.empty())
+	{
+		int v = pq.top().second, cur_d = pq.top().first;
+		pq.pop();
+
+		if (cur_d > d[v])
+			continue;
+
+		for (auto& i : gr[v])
+		{
+			int to = i.first;
+			int cost = i.second;
+
+			if (d[v] + cost < d[to])
+			{
+				d[to] = d[v] + cost;
+				pq.push({ d[to], to });
+			}
+		}
+	}
+}
 #endif // !UTILS_H
