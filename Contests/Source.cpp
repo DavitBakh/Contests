@@ -2,7 +2,9 @@
 #define _SILENCE_CXX20_CISO646_REMOVED_WARNING
 #include<bits/stdc++.h>
 #include<unordered_set>
+#include<primesieve.hpp>
 using namespace std;
+
 
 #define all(a) a.begin(), a.end()
 #define read(x) for(auto &elem : x) cin >> elem;
@@ -22,5 +24,8 @@ int main()
 	std::cin.tie(0);
 #pragma endregion
 
-	
+	unsigned long long  n;
+	std::cin >> n;
+
+	std::cout << primesieve::count_primes(0,n) << std::endl;
 }

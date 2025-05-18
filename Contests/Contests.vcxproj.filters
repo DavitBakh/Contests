@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Primesieve">
+      <UniqueIdentifier>{6bb7b560-db5e-4c5b-b22a-1475cbf32d00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -20,6 +23,90 @@
     </ClCompile>
     <ClCompile Include="InputSimulator.hpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\iterator.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\nthPrime.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\popcount.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\arch\x86\cpuid.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\iterator-c.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\app\stressTest.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\arch\arm\sve.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\app\test.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\app\help.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\app\main.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\app\CmdOptions.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\api.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\api-c.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\RiemannR.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\SievingPrimes.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\PrimeSieveClass.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\PrimeGenerator.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\PreSieve.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\ParallelSieve.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\LookupTables.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\MemoryPool.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\EratSmall.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\IteratorHelper.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\EratBig.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\EratMedium.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\Erat.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\CpuInfo.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Primesieve\src\CountPrintPrimes.cpp">
+      <Filter>Resource Files\Primesieve</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

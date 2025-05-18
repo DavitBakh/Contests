@@ -1,6 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#pragma optimize("gt", on)  // Enable global optimization + fast code generation
+
 #include <bits/stdc++.h> 
 #include <Windows.h>
 

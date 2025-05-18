@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{a4505a63-350f-43ed-8be0-aa12ab8697d9}</ProjectGuid>
     <RootNamespace>CodeForces</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -105,7 +108,9 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_LOCAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\includes;$(ProjectDir)..\Primesieve\include;$(ProjectDir)..\Primesieve\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,6 +134,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Primesieve\src\api-c.cpp" />
+    <ClCompile Include="..\Primesieve\src\api.cpp" />
+    <ClCompile Include="..\Primesieve\src\app\CmdOptions.cpp" />
+    <ClCompile Include="..\Primesieve\src\app\help.cpp" />
+    <ClCompile Include="..\Primesieve\src\app\main.cpp" />
+    <ClCompile Include="..\Primesieve\src\app\stressTest.cpp" />
+    <ClCompile Include="..\Primesieve\src\app\test.cpp" />
+    <ClCompile Include="..\Primesieve\src\arch\arm\sve.cpp" />
+    <ClCompile Include="..\Primesieve\src\arch\x86\cpuid.cpp" />
+    <ClCompile Include="..\Primesieve\src\CountPrintPrimes.cpp" />
+    <ClCompile Include="..\Primesieve\src\CpuInfo.cpp" />
+    <ClCompile Include="..\Primesieve\src\Erat.cpp" />
+    <ClCompile Include="..\Primesieve\src\EratBig.cpp" />
+    <ClCompile Include="..\Primesieve\src\EratMedium.cpp" />
+    <ClCompile Include="..\Primesieve\src\EratSmall.cpp" />
+    <ClCompile Include="..\Primesieve\src\iterator-c.cpp" />
+    <ClCompile Include="..\Primesieve\src\iterator.cpp" />
+    <ClCompile Include="..\Primesieve\src\IteratorHelper.cpp" />
+    <ClCompile Include="..\Primesieve\src\LookupTables.cpp" />
+    <ClCompile Include="..\Primesieve\src\MemoryPool.cpp" />
+    <ClCompile Include="..\Primesieve\src\nthPrime.cpp" />
+    <ClCompile Include="..\Primesieve\src\ParallelSieve.cpp" />
+    <ClCompile Include="..\Primesieve\src\popcount.cpp" />
+    <ClCompile Include="..\Primesieve\src\PreSieve.cpp" />
+    <ClCompile Include="..\Primesieve\src\PrimeGenerator.cpp" />
+    <ClCompile Include="..\Primesieve\src\PrimeSieveClass.cpp" />
+    <ClCompile Include="..\Primesieve\src\RiemannR.cpp" />
+    <ClCompile Include="..\Primesieve\src\SievingPrimes.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="InputSimulator.hpp" />
   </ItemGroup>
