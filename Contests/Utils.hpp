@@ -204,6 +204,26 @@ int binpow(int a, int b, int m = MOD)
 	return res;
 }
 
+void Eratasfen()
+{
+	int N = 6e6;
+	vector<int> p, ip(N, 1);
+
+	p.push_back(2);
+	for (int i = 4; i <= N; i += 2)
+		ip[i] = 0;
+
+	for (int i = 3; i <= N; i += 2)
+	{
+		if (ip[i])
+		{
+			for (int j = 2 * i; j <= N; j += i)
+				ip[j] = 0;
+
+			p.push_back(i);
+		}
+	}
+}
 void Djikstra(vector < vector < pair<int, int>>>& gr)
 {
 	int n = gr.size();
