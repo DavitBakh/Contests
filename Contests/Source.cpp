@@ -2,7 +2,7 @@
 #define _SILENCE_CXX20_CISO646_REMOVED_WARNING
 #include<bits/stdc++.h>
 #include<unordered_set>
-#include<primesieve.hpp>
+//#include<primesieve.hpp>
 using namespace std;
 
 
@@ -11,6 +11,7 @@ using namespace std;
 #define forall(x) for(auto &e : x)
 
 constexpr int MOD = 1e9 + 7;
+
 
 int main()
 {
@@ -24,8 +25,31 @@ int main()
 	std::cin.tie(0);
 #pragma endregion
 
-	unsigned long long  n;
-	std::cin >> n;
 
-	std::cout << primesieve::count_primes(0,n) << std::endl;
+	int n, x;
+	std::cin >> n >> x;
+
+	vector<int> weight(n+1);
+	for (int i = 1; i <= n; i++)
+		std::cin >> weight[i];
+
+	vector<int> cost(n+1);
+	for (int i = 1; i <= n; i++)
+		std::cin >> cost[i];
+
+	vector<vector<int>> dp(n + 1, vector<int>(x + 1));
+
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= x; j++)
+		{
+			if (j >= weight[i])
+				dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + cost[i]);
+			else
+				dp[i][j] = dp[i - 1][j];
+		}
+	}
+
+	std::cout << dp[n][x] << std::endl;
+
 }

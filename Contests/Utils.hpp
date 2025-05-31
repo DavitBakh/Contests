@@ -256,4 +256,39 @@ void Djikstra(vector < vector < pair<int, int>>>& gr)
 		}
 	}
 }
+
+void Prim(vector<vector<pair<int, int>>>& gr)
+{
+	int n = gr.size();
+
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
+	pq.push({ 0,0 });
+
+	vector<char> used(n);
+	unsigned long long minCost = 0;
+	while (!pq.empty())
+	{
+		pair<int, int> curr = pq.top();
+		pq.pop();
+
+		int v = curr.second;
+		int cost = curr.first;
+
+		if (used[v])
+			continue;
+
+		used[v] = 1;
+		minCost += cost;
+		for (auto& e : gr[v])
+		{
+			if (!used[e.first])
+				pq.push({ e.second, e.first });
+		}
+	}
+
+	if (any_of(all(used), [&](char ch) {return ch == 0; }))
+		std::cout << "IMPOSSIBLE" << std::endl;
+	else
+		std::cout << minCost << std::endl;
+}
 #endif // !UTILS_H

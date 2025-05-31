@@ -134,34 +134,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Primesieve\src\api-c.cpp" />
-    <ClCompile Include="..\Primesieve\src\api.cpp" />
-    <ClCompile Include="..\Primesieve\src\app\CmdOptions.cpp" />
-    <ClCompile Include="..\Primesieve\src\app\help.cpp" />
-    <ClCompile Include="..\Primesieve\src\app\main.cpp" />
-    <ClCompile Include="..\Primesieve\src\app\stressTest.cpp" />
-    <ClCompile Include="..\Primesieve\src\app\test.cpp" />
-    <ClCompile Include="..\Primesieve\src\arch\arm\sve.cpp" />
-    <ClCompile Include="..\Primesieve\src\arch\x86\cpuid.cpp" />
-    <ClCompile Include="..\Primesieve\src\CountPrintPrimes.cpp" />
-    <ClCompile Include="..\Primesieve\src\CpuInfo.cpp" />
-    <ClCompile Include="..\Primesieve\src\Erat.cpp" />
-    <ClCompile Include="..\Primesieve\src\EratBig.cpp" />
-    <ClCompile Include="..\Primesieve\src\EratMedium.cpp" />
-    <ClCompile Include="..\Primesieve\src\EratSmall.cpp" />
-    <ClCompile Include="..\Primesieve\src\iterator-c.cpp" />
-    <ClCompile Include="..\Primesieve\src\iterator.cpp" />
-    <ClCompile Include="..\Primesieve\src\IteratorHelper.cpp" />
-    <ClCompile Include="..\Primesieve\src\LookupTables.cpp" />
-    <ClCompile Include="..\Primesieve\src\MemoryPool.cpp" />
-    <ClCompile Include="..\Primesieve\src\nthPrime.cpp" />
-    <ClCompile Include="..\Primesieve\src\ParallelSieve.cpp" />
-    <ClCompile Include="..\Primesieve\src\popcount.cpp" />
-    <ClCompile Include="..\Primesieve\src\PreSieve.cpp" />
-    <ClCompile Include="..\Primesieve\src\PrimeGenerator.cpp" />
-    <ClCompile Include="..\Primesieve\src\PrimeSieveClass.cpp" />
-    <ClCompile Include="..\Primesieve\src\RiemannR.cpp" />
-    <ClCompile Include="..\Primesieve\src\SievingPrimes.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="InputSimulator.hpp" />
   </ItemGroup>
