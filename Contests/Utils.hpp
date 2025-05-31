@@ -291,4 +291,50 @@ void Prim(vector<vector<pair<int, int>>>& gr)
 	else
 		std::cout << minCost << std::endl;
 }
+
+int partition(vector<int>& arr, int pivotIndex)
+{
+	int low = 0, high = arr.size() - 1;
+	int pivot = arr[pivotIndex];
+
+	while (low < high)
+	{
+		while (low < high && arr[low] <= pivot)
+			++low;
+
+		while (low < high && arr[high] >= pivot)
+			--high;
+
+		if (low < high)
+		{
+			swap(arr[low], arr[high]);
+		}
+	}
+
+	swap(arr[high], arr[pivotIndex]);
+
+	return high;
+}
+
+int longestCommonSubsequence(string text1, string text2)
+{
+	int n = text1.size();
+	int m = text2.size();
+
+	vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= m; j++)
+		{
+			if (text1[i - 1] == text2[j - 1])
+				dp[i][j] = dp[i - 1][j - 1] + 1;
+			else
+				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+		}
+	}
+
+	return dp.back().back();
+}
+
 #endif // !UTILS_H
