@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>GetZ</Title>
+			<Shortcut>GetZ</Shortcut>
+			<Description>Code snippet for GetZ function'</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+	<![CDATA[void GetZF(const string& str, vector<int>& z)
+{
+	int n = str.size();
+
+	int l = 0, r = 0;
+	for (int i = 1; i < n; ++i)
+	{
+		if (r >= i)
+			z[i] = min(z[i - l], r - i + 1);
+
+		while (z[i] + i < n && str[z[i]] == str[z[i] + i])
+			++z[i];
+
+		if (i + z[i] - 1 > r)
+		{
+			l = i;
+			r = i + z[i] - 1;
+		}
+	}
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

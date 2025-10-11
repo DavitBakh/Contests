@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Partition</Title>
+			<Shortcut>Partition</Shortcut>
+			<Description>Code snippet for Partition</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+	<![CDATA[int partition(vector<int>& arr, int pivotIndex)
+{
+	int low = 0, high = arr.size() - 1;
+	int pivot = arr[pivotIndex];
+
+	while (low < high)
+	{
+		while (low < high && arr[low] <= pivot)
+			++low;
+
+		while (low < high && arr[high] >= pivot)
+			--high;
+
+		if (low < high)
+		{
+			swap(arr[low], arr[high]);
+		}
+	}
+
+	swap(arr[high], arr[pivotIndex]);
+
+	return high;
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
