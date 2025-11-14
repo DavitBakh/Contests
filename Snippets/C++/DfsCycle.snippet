@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>DfsCycle</Title>
+			<Shortcut>DfsCycle</Shortcut>
+			<Description>Code snippet for Dfs that find cycle</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp"><![CDATA[bool dfs(int v, int prev, vector<vector<int>>& g, vector<int>& used, vector<int>& path)
+{
+	used[v] = 1;
+	path.push_back(v);
+
+	for (auto& to : g[v])
+	{
+		if (!used[to])
+			if (dfs(to, v, g, used, path))
+				return true;
+
+		if (used[to] == 1 && to != prev)
+		{
+			auto it = find(all(path), to);
+			std::cout << distance(it, path.end()) + 1 << std::endl;
+			while (it != path.end())
+			{
+				std::cout << *it + 1 << ' ';
+				it++;
+			}
+			std::cout << to + 1 << std::endl;
+
+			return true;
+		}
+
+	}
+
+	used[v] = 2;
+	path.pop_back();
+
+	return false;
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

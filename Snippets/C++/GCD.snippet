@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>GCD</Title>
+			<Shortcut>GCD</Shortcut>
+			<Description>Code snippet for GCD</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp"><![CDATA[int gcd(int a, int b, int& x, int& y)
+{
+	if (b == 0)
+	{
+		x = 1;
+		y = 0;
+		return a;
+	}
+
+	int tx, ty;
+	int c = gcd(b, a % b, tx, ty);
+	x = ty;
+	y = tx - (a / b) * ty;
+
+	return c;
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

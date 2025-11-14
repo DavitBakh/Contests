@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Bfs</Title>
+			<Shortcut>Bfs</Shortcut>
+			<Description>Code snippet for Bfs</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp"><![CDATA[void bfs(int source, vector<vector<int>>& graph, vector<char>& used)
+{
+	int n = graph.size();
+
+	queue<int> q;
+	q.push(source);
+	used[source] = 1;
+
+	while (!q.empty())
+	{
+		int curr = q.front();
+		q.pop();
+
+		for (auto& e : graph[curr])
+		{
+			if (used[e] == 0)
+			{
+				q.push(e);
+				used[e] = 1;
+			}
+		}
+	}
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

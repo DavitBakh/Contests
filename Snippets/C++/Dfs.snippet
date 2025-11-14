@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Dfs</Title>
+			<Shortcut>Dfs</Shortcut>
+			<Description>Code snippet for Dfs</Description>
+			<Author>Davit Bakhshyan</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp"><![CDATA[void dfs(int v, vector<vector<int>>& g, vector<int>& used)
+{
+	used[v] = 1;
+	for (auto& to : g[v])
+	{
+		if (!used[to])
+			dfs(to, g, used);
+	}
+}$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
