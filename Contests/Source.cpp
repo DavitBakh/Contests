@@ -12,7 +12,9 @@ using namespace std;
 
 constexpr int MOD = 1e9 + 7;
 
-
+typedef unsigned long long ull;
+typedef long long ll;
+typedef unsigned int ui;
 
 int main()
 {
@@ -26,6 +28,6 @@ int main()
 	std::cin.tie(0);
 #pragma endregion
 
-
+	
 
 }
