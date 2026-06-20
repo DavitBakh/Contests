@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="BigDecimal.hpp" />
     <ClInclude Include="BigInt.hpp" />
+    <ClInclude Include="SegTree.h" />
     <ClInclude Include="Trie.hpp" />
     <ClInclude Include="Utils.hpp" />
   </ItemGroup>
